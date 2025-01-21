@@ -1,0 +1,15 @@
+/* Colour Scheme
+    red: #e30713
+    black: #08090a
+    green: #014525 
+    cream: #fffbed*/
+
+body {
+    background-color: #014525;
+    font-family: "Oregano", sans-serif;
+}
+
+h1 {
+    font-family: "Rye", sans-serif;
+    color: #fffbed;
+}
