@@ -15,18 +15,34 @@ document.addEventListener("DOMContentLoaded", function(){
                 //continue the loop --> display alert add to the winning score 
         });
     }
+    var cards = ["ace", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "Jack", "Queen", "King"];
+    var prevCard = "";
+    var randomNumber = 0;
+    var numCorrect =  0;
 
-        //RANDOM IMAGE GENERATOR
-        //!!!! function card() {
-            card = new image(pathImage)
-        }
+//CHOOSES A RANDOM CARD 
+    function addCard() {
+        randomNumber = 0;
+        var randomCard = 0;
 
+        randomNumber = Math.floor(Math.random() * cards.length);
+        randomCard = cards[randomNumber];
+        while (prevCard === randomCard);
+        return randomCard
 
-    // Count for cards --> give them true / false values
-    function guess() {
-        if (onclick(higher)) {
-            let guess = valueOfCard > card;
-        } else if (onclick(lower)) {
-            let guess = valueOfCard < card;
-        }
     }
+            
+            if (valueOfCard == document.getElementsByClassName("King").value){
+                // Count for cards --> give them true / false values
+                function guess() {
+                    if (onclick(higher)) {
+                        let guess = valueOfCard > card;
+                    } else if (onclick(lower)) {
+                        let guess = valueOfCard < card;
+                    }
+                }
+            }
+        }
+
+
+    
