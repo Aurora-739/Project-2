@@ -31,6 +31,14 @@ document.addEventListener("DOMContentLoaded", function(){
         return randomCard
 
     }
+//ACTUALLY GUESSING (USING THE HIGHER LOWER BUTTONS)
+    function guessing(guess) {
+        var newCard = addCard();
+        var correctGuess = guessTheCard(guess, newCard);
+        incrementScores(correctGuess);
+        setprevCard(newCard);
+    }
+
 // The Guessing Functions 
     function guessTheCard(guess, newCard) {
         var correctGuess;
