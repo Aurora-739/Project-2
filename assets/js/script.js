@@ -31,6 +31,29 @@ document.addEventListener("DOMContentLoaded", function(){
         return randomCard
 
     }
+// The Guessing Functions 
+    function guessTheCard(guess, newCard) {
+        var correctGuess;
+
+        if(guess === "higher"){
+            if (newCard > prevCard) {
+                correctGuess = true;
+            } else {
+                correctGuess = false;
+        } 
+        } else if (guess === "lower") {
+            if (newCard < prevCard) {
+                correctGuess = true;
+            } else {
+                correctGuess = false;
+            }
+        } else {
+            alert("No guess provided")
+            correctGuess = false;
+        }
+
+        return correctGuess;
+    }
             
             if (valueOfCard == document.getElementsByClassName("King").value){
                 // Count for cards --> give them true / false values
